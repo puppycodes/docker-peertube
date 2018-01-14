@@ -1,0 +1,46 @@
+listen:
+  port: 9000
+
+webserver:
+  https: {{ 'true' if PUBLIC_HTTPS else 'false' }}
+  hostname: '{{ PUBLIC_HOSTNAME or 'peertube.test' }}'
+  port: {{ PUBLIC_PORT or '80' }}
+
+database:
+  hostname: '{{ PG_HOST or 'db' }}'
+  port: '{{ PG_PORT or '5432' }}'
+  suffix: ''
+  username: '{{ PG_USER }}'
+  password: '{{ PG_PASSWORD }}'
+
+storage:
+  certs: 'certs/'
+  videos: '/data/videos/'
+  logs: '/data/logs/'
+  previews: '/data/previews/'
+  thumbnails: '/data/thumbnails/'
+  torrents: '/data/torrents/'
+
+cache:
+  previews:
+    size: 1
+
+admin:
+  email: '{{ ADMIN_EMAIL or 'admin@example.com' }}'
+
+signup:
+  enabled: true
+  limit: {{ SIGNUP_LIMIT or '-1' }}
+
+user:
+  video_quota: {{ VIDEO_QUOTA or '-1' }}
+
+transcoding:
+  enabled: {{ 'true' if TRANSCODING else 'false' }}
+  threads: 2
+  resolutions:
+    240p: true
+    360p: true
+    480p: true
+    720p: true
+    1080p: true
