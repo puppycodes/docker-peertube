@@ -18,6 +18,8 @@ The container uses a single volume located at ``/data`` to store:
  - thumbnails
  - certificates if any
 
+The contents of the mounted path must belong to ``991:991``.
+
 # Ports
 
 The container exposes its Web interface port ``9000/tcp``. All services are

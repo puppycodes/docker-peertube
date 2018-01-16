@@ -9,14 +9,15 @@ WORKDIR /app
 
 RUN bash -c 'yarn install --pure-lockfile && npm run build'
 
-ENV NODE_ENV production
-
 COPY conf /conf
 COPY start.py /start.py
 
+RUN addgroup -g 991 peertube \
+ && adduser -D -u 991 -G peertube -h /data peertube
+USER peertube
+
+ENV NODE_ENV production
 EXPOSE 9000
 VOLUME ["/data"]
-
-
 
 CMD /start.py
