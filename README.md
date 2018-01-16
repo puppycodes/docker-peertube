@@ -1,5 +1,7 @@
 # Peertube for Docker
 
+[![Docker hub](https://img.shields.io/docker/automated/tedomum/peertube.svg?maxAge=2592000)](https://hub.docker.com/r/tedomum/peertube/)
+
 Peertube is a federated video sharing and distribution solution, based on a
 Web application and Webtorrent for efficient download.
 
