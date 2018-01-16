@@ -14,4 +14,9 @@ ENV NODE_ENV production
 COPY conf /conf
 COPY start.py /start.py
 
+EXPOSE 9000
+VOLUME ["/data"]
+
+
+
 CMD /start.py
