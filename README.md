@@ -35,7 +35,7 @@ Reverse proxy configuration :
    (the one served by the reverse proxy)
  - ``PUBLIC_PORT`` must be set to the TCP port where the instance publicly
    served (defaults to ``80``)
- - ``PUBLIC_HTTPS`` must be set to ``true`` if the reverse proxy serves HTTPS
+ - ``PUBLIC_HTTPS`` must be set if the reverse proxy serves HTTPS
 
 Database configuration :
 

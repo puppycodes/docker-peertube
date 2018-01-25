@@ -13,7 +13,8 @@ COPY conf /conf
 COPY start.py /start.py
 
 RUN addgroup -g 991 peertube \
- && adduser -D -u 991 -G peertube -h /data peertube
+ && adduser -D -u 991 -G peertube -h /data peertube \
+ && chown 991:991 /app/config
 USER peertube
 
 ENV NODE_ENV production

@@ -14,12 +14,14 @@ database:
   password: '{{ PG_PASSWORD }}'
 
 storage:
-  certs: '../certs/'
+  avatars: '../data/avatars/'
+  certs: '../data/certs/'
   videos: '../data/videos/'
   logs: '../data/logs/'
   previews: '../data/previews/'
   thumbnails: '../data/thumbnails/'
   torrents: '../data/torrents/'
+  cache: '../data/cache/'
 
 cache:
   previews:
